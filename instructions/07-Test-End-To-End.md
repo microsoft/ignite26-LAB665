@@ -53,7 +53,7 @@ You have the agent completed and the workflow to allow the end to end process to
 | Layer | Responsibility |
 | --- | --- |
 | Request list and Workflow | Started the review and stored the readable response |
-| SharePoint MCP | Retrieved current records and enabled a controlled log write |
+| SharePoint connector tools or MCP | Retrieved current records and enabled a controlled log write |
 | SharePoint knowledge | Supplied contract, approval, policy, and quality-document facts |
 | Skills and sandbox | Organized facts, calculated the result, and created the PDF |
 | Human reviewer | Owns every financial decision |

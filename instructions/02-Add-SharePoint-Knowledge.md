@@ -27,7 +27,7 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
     ![Confirm knowledge](./assets/02.5-confirm-knowledge.png)
 
 > [!NOTE]
-> **Why:** Knowledge retrieves relevant information from governed documents. It's different from an MCP tool, which performs live operations against data.
+> **Why:** Knowledge retrieves relevant information from governed documents. It's different from a connector or MCP tool, which performs live operations against data.
 
 ## Test document knowledge grounding
 
@@ -58,4 +58,4 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Select the build tab](./assets/02.10-build-tab.png)
 
-Select **Next** to continue with the lab to connect live SharePoint operations.
+Continue to [Add the SharePoint connector](./03-Connect-SharePoint.md), or use [Connect the SharePoint MCP](./03-Connect-SharePoint-MCP.md) if you are following the MCP path. Complete only one path before continuing to section 4.

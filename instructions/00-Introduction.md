@@ -11,7 +11,7 @@ Caldova receives an invoice from Astor Ridge Biologics with charges that might e
 Your agent will:
 
 - read an Excel invoice you attach;
-- retrieve current records through the SharePoint MCP;
+- retrieve current records through SharePoint connector tools or the SharePoint MCP;
 - ground decisions in SharePoint contracts, policy, approvals, and quality documents;
 - run reusable skills and packaged Python;
 - create a PDF review brief;

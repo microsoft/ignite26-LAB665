@@ -60,7 +60,7 @@ Now you'll create a Workflow that starts an invoice review when a SharePoint req
 
     Request notes: [Request Notes]
 
-    Use the SharePoint MCP for current invoice, line, supplier, and quality records. Use Caldova SharePoint knowledge for the governing contract, approvals, and policy. Run both configured skills.
+    Use the configured SharePoint tools (connector actions or MCP) for current invoice, line, supplier, and quality records. Use Caldova SharePoint knowledge for the governing contract, approvals, and policy. Run both configured skills.
 
     Return supported and disputed amounts, reconciliation difference, human-review status and reasons, evidence citations, and a statement that no financial or supplier action was taken.
     ```
@@ -114,6 +114,6 @@ Now you'll create a Workflow that starts an invoice review when a SharePoint req
     ![Save the changes](./assets/06.18-publish.png)
 
 > [!NOTE]
-> **Why:** The workflow provides a predictable trigger and stores the result. The agent owns MCP retrieval, knowledge grounding, skill execution, and policy reasoning and the workflow helps to make this process autonomous.
+> **Why:** The workflow provides a predictable trigger and stores the result. The agent owns SharePoint retrieval through its configured connector actions or MCP, knowledge grounding, skill execution, and policy reasoning and the workflow helps to make this process autonomous.
 
 Select **Next** to run the final test.
