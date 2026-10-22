@@ -2,6 +2,8 @@
 
 # 3 - Connect the SharePoint MCP
 
+This is the MCP path for section 3. If the SharePoint MCP is unavailable or unreliable, use [Add the SharePoint connector](./03-Connect-SharePoint.md) instead. Complete only one path before continuing to section 4.
+
 ## What is MCP?
 
 Model Context Protocol exposes a menu of operations an agent can discover and call. In this lab, SharePoint knowledge reads documents, while the SharePoint MCP reads current list records and records a review result.
@@ -89,4 +91,4 @@ Model Context Protocol exposes a menu of operations an agent can discover and ca
 
     ![GO back to the build tab](./assets/03.14-build-tab.png)
 
-Select **Next** to add reusable skills.
+Continue to [Add skills and review an invoice](./04-Add-Skills-And-Review-Invoice.md).

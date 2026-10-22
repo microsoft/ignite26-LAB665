@@ -28,7 +28,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 
     ```text
     1. Read the attached invoice and capture its supplier, invoice ID, PO, contract, batch or lot, total, and every line.
-    2. Use the SharePoint MCP to retrieve the matching invoice, lines, supplier, and quality-event records.
+    2. Use the configured SharePoint tools (connector actions or MCP) to retrieve the matching invoice, lines, supplier, and quality-event records.
     3. Use SharePoint knowledge to find the governing contract, policy, and written approvals.
     4. Compare the submitted file with current records. Never resolve a conflict by guessing.
     5. For each line, identify the invoiced amount, contract-permitted amount, and supporting source.
@@ -94,7 +94,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 1. Inspect the activity and review the action it takes. Select **Approve** for any permissions screens that pop up:
    - attached Excel file read
    - **invoice-fact-check** skill called
-   - SharePoint MCP list reads
+   - SharePoint list reads through your configured connector actions or MCP
    - SharePoint knowledge citations
    - **invoice-review-decision** skill called
    - Python execution
