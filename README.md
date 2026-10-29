@@ -35,7 +35,7 @@ Fill in the sections below yourself, then:
 ## 🔥LAB665: See how far one agent goes in Copilot Studio
 ### Session description
 
-Add your session description here. Keep it concise — 2-3 sentences about what attendees will learn and why it matters.
+Build a Supplier Assurance Agent in Copilot Studio to review supplier invoices against SharePoint records, contracts, and approvals. Add reusable skills and packaged Python, generate a PDF review brief, and evaluate and publish the agent for use in a workflow. Keep authorized reviewers in control: the agent recommends actions but never pays invoices or changes supplier status.
 
 ### 🚀 Getting started
 
@@ -43,33 +43,31 @@ Add your session description here. Keep it concise — 2-3 sentences about what 
 
 If you're following along during a live session:
 
-1. Step 1
-2. Step 2
-3. Open [`instructions/`](instructions/README.md) when this session includes
-   attendee step-by-step guidance
+1. Open your assigned lab environment and locate the **Resources** panel.
+2. Follow [Introduction and sign in](instructions/00-Introduction.md) to sign in and verify your assigned resources.
+3. Follow the [lab instructions](instructions/README.md) to build, evaluate, and publish your agent, then use it in a workflow.
 
 #### On your own
 
 If you're learning at your own pace:
 
-1. Clone this repository
-2. Set up your environment
-3. Follow the session guidance in [`instructions/`](instructions/README.md), or
-   use the linked docs-site entry point when this repository uses that pattern
+1. Clone this repository or browse the [lab instructions](instructions/README.md) on GitHub.
+2. Review the [lab overview and environment requirements](instructions/README.md). The hosted lab uses a prepared SharePoint site, reference documents, operational lists, learner account, mailbox, and Power Platform environment. Outside the hosted lab, you'll need equivalent resources and must replace Skillable variables with values from your own environment.
+3. Follow the [lab sections in order](instructions/README.md#lab-sections), starting with [Introduction and sign in](instructions/00-Introduction.md).
 
 ### 🎯 Learning outcomes
 
 By the end of this session, you will be able to:
 
-- Outcome 1
-- Outcome 2
-- Outcome 3
+- Build a Supplier Assurance Agent in Copilot Studio with focused instructions, guardrails, and SharePoint knowledge and tools.
+- Add reusable skills and packaged Python to review invoices and generate a PDF review brief.
+- Evaluate and publish the agent, then use it in a workflow with authorized reviewers remaining in control.
 
 ### 💻 Technologies used
 
-- Technology 1
-- Technology 2
-- Technology 3
+- Microsoft Copilot Studio
+- Microsoft Copilot Harness
+- SharePoint
 
 ### 📚 Continue your learning
 
@@ -101,17 +99,12 @@ For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp)
 
 ### 👥 Content owners
 
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
+    <td align="center"><a href="https://github.com/aprildunnam">
+        <img src="https://github.com/aprildunnam.png" width="100px;" alt="April Dunnam"/><br />
+        <sub><b>April Dunnam</b></sub></a><br />
+            <a href="https://github.com/aprildunnam" title="talk">📢</a>
     </td>
 </tr></table>
 
