@@ -9,7 +9,7 @@
 ## 🔥LAB665: See how far one agent goes in Copilot Studio
 ### Session description
 
-Build a Supplier Assurance Agent in Copilot Studio to review supplier invoices against SharePoint records, contracts, and approvals. Add reusable skills and packaged Python, generate a PDF review brief, and evaluate and publish the agent for use in a workflow. Keep authorized reviewers in control: the agent recommends actions but never pays invoices or changes supplier status.
+How far can one agent go? In this hands-on lab, you'll build an agent in the new Copilot Studio and push it through increasingly complex challenges. Learn how orchestration, Skills, and automation work together to unlock powerful agent experiences.
 
 ### 🚀 Getting started
 
