@@ -4,6 +4,7 @@
 
 The first step in creating your agent is to establish its purpose and boundaries before connecting data.
 
+1. Open Microsoft Edge Browser (the Internet icon on the VM desktop) in your virtual machine and go to +++https://copilotstudio.microsoft.com+++.
 1. Sign in with the username and TAP from the **Resources** tab.
 1. Select the environment dropdown in the bottom left-hand corner and choose the **DevOne** environment.
 
