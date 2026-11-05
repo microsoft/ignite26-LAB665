@@ -33,7 +33,4 @@ Select the **Resources** tab to find your Virtual Machine credentials and Micros
 1. Confirm the lab files exist in your Virtual Machine's hard drive at `D:\LabFiles`.
 1. Open Microsoft Edge.
 
-> [!NOTE]
-> If credentials are missing, select **Refresh Credentials**. Wait for autotype to finish before interacting with the VM.
-
 Ready to get started? Click **Next**.
