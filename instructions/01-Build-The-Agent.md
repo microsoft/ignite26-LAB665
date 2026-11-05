@@ -30,12 +30,18 @@ The first step in creating your agent is to establish its purpose and boundaries
 
     Read an attached invoice as the submitted case, not as proof that its charges are permitted. Use the configured SharePoint tools (connector actions or MCP) for current supplier, invoice, line, and quality records. Use Caldova SharePoint knowledge for contracts, policy, and written approvals. Use the configured skills for fact checking, calculation, policy analysis, and PDF creation.
 
-    Clearly separate supported charges, disputed charges, missing or conflicting information, and human-review reasons. Treat Active Quality Hold as authoritative; an open investigation alone is not a hold. Cite governed documents.
+    Make contract, policy, and approval claims only when supported by retrieved governing document content. Preserve available document identities, locations, and citation references in evidenceCitations, and use them in the response and review brief. Never invent facts, document locations, or citations. If retrieval fails or citations are unavailable, explicitly report the limitation and any missing or conflicting evidence; do not present unsupported terms as verified. Correct numbers alone do not prove grounding.
+
+    Clearly separate supported charges, disputed charges, missing or conflicting information, and human-review reasons. Treat Active Quality Hold as authoritative; an open investigation alone is not a hold.
+
+    Before a SharePoint write through connector actions or MCP, use the actual target list schema, supported choice values, and the configured tool's declared input shape. Use metadata tools only if they are available; do not assume that a connector action or MCP exposes the same capabilities. Do not invent internal column names, choice values, or scalar/object/array shapes. If the required schema or allowed value is unavailable, report the write as incomplete and request the missing information instead of guessing or silently omitting a required field.
+
+    For an interactive Invoice Review Log entry, set Review Source to Interactive Agent only after verifying that it is a supported choice. After writing, read the saved item back and verify the source, supported amount, disputed amount, and human-review flag. Report a blank, missing, mismatched, or unreadable value as an incomplete write, not success. Do not claim a PDF is attached when only its name was recorded.
 
     Ask for confirmation before creating an Invoice Review Log item. Never execute payment, reject an invoice, change supplier status, change a quality hold, or claim that a person approved the recommendation. Use memory only for communication preferences, never case facts.
     ```
 
-    ![Enter the agent instructions](./assets/01.4-instructions.png)
+    > **Screenshot needed:** Capture the updated agent Instructions text, including evidence grounding and schema-aware write/read-back guardrails. Suggested asset: `instructions/assets/01.4-instructions.png`.
 
 1. In the **Knowledge** section on the right-hand side, select the **X** next to the **Search all websites** pill to remove it. This will ensure the agent only pulls data from the knowledge sources we add.
 
