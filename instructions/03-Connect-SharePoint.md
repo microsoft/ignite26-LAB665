@@ -18,7 +18,7 @@ Use the lab navigation to choose either this section or **3 - Connect the ShareP
 
 1. Type `SharePoint Get` in the text box. The **SharePoint** group may show only a partial list of actions. If **Get item** is not visible, select **See N more** next to **SharePoint** to expand the group, then select **Get item**. The number in **See N more** varies.
 
-    > **Screenshot needed:** Capture the Connectors search for `SharePoint Get` with the collapsed SharePoint group and its **See N more** expansion link visible. Suggested asset: `instructions/assets/03.3-expand-sharepoint-actions.png`.
+    ![SharePoint Get search in Connectors with the collapsed SharePoint group's See 47 more link highlighted](./assets/03.3-expand-sharepoint-actions.png)
 
     ![Select SharePoint Get item](./assets/03.3-select-get-item.png)
 
