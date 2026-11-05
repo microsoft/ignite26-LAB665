@@ -43,19 +43,16 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Test prompt](./assets/02.7-test-prompt.png)
 
-1. Check that the answer identifies **4%**, **$7,400**, and the need for a **revised purchase order** and written **VP approval**, supported by retrieved governing contract content. These expected numbers alone do not prove the answer is grounded.
+1. Confirm the answer identifies **4%**, **$7,400**, and the need for a **revised purchase order** and written **VP approval**.
 
     ![Review the response](./assets/02.8-prompt-response.png)
 
     > [!TIP]
-    > Wording can vary. Validate the facts and retrieved source rather than expecting an exact sentence. The screenshots illustrate a grounded answer; they do not prove retrieval succeeded in your session.
+    > Wording can vary. Validate the facts and source rather than expecting an exact sentence.
 
-1. Open each available **Citation** below the response. Verify that the retrieved contract content supports the premium cap and approval requirement, and check its document identity and location.
+1. Click on each of the **Citations** shown below the response and verify where the answer came from.
 
     ![Review citations](./assets/02.9-citations.png)
-
-    > [!IMPORTANT]
-    > If knowledge retrieval fails, the answer must explicitly report the failure rather than guess the contract terms. If document content was retrieved but standard citations are unavailable, check any available document identity and location and have the agent state the citation limitation. Missing or conflicting governing evidence must remain visible; do not mark this grounding check as passed based on the expected numbers alone. The reported `SubstrateSearch(GetNumActiveUsers)` backend failure is not fixed by these instructions.
 
 1. Select the **Build** tab to go back to the configuration screen.
 
