@@ -42,11 +42,11 @@ The first step in creating your agent is to establish its purpose and boundaries
     Ask for confirmation before creating an Invoice Review Log item. Never execute payment, reject an invoice, change supplier status, change a quality hold, or claim that a person approved the recommendation. Use memory only for communication preferences, never case facts.
     ```
 
-    > **Screenshot needed:** Capture the updated agent Instructions text, including evidence grounding and schema-aware write/read-back guardrails. Suggested asset: `instructions/assets/01.4-instructions.png`.
+    ![Supplier Assurance Agent with the Instructions editor highlighted](./assets/01.4-instructions.png)
 
-1. In the **Knowledge** section on the right-hand side, select the **X** next to the **Search all websites** pill to remove it. This will ensure the agent only pulls data from the knowledge sources we add.
+1. On the right-hand side, select the **X** next to **Search all websites** under **Knowledge** and the **X** next to **Work IQ** under **Tools**. Remove this default web knowledge and Work IQ tool so the lab uses the knowledge sources and tools we configure.
 
-    ![Remove ability to search all websites](./assets/01.5-remove-all-websites.png)
+    ![Highlighted X controls for removing Search all websites under Knowledge and Work IQ under Tools](./assets/01.5-remove-all-websites.png)
 
 1. Select the **Save** button in the upper-right-hand corner to save your changes so far.
 
