@@ -55,42 +55,49 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 
 1. Select the **Evaluate** tab.
 
-    ![Select the evaluate tab](./assets/05.10-evaluate-tab.png)
+1. If the evaluation setup is not already open, select **Create your first evaluation**. At the top of the setup page, select **Enter the evaluation name** and name it `Supplier Assurance baseline`.
 
-1. Select **Create your first evaluation**.
+    > **Screenshot needed:** Capture the current evaluation setup with the top evaluation name field filled with Supplier Assurance baseline. Suggested asset: `instructions/assets/05.11-create-eval.png`.
 
-    ![Select create your first evaluation](./assets/05.11-create-eval.png)
+1. In **Create or select a data set**, select **Import**. Under **Select data type**, change the default **Single responses** selection to **Conversations** before uploading the CSV.
 
-1. Select the **Browse** text and select this file:
+    > **Screenshot needed:** Capture Import selected, Conversations selected instead of Single responses, and the CSV upload area before a file is uploaded. Suggested asset: `instructions/assets/05.12-import-conversations.png`.
+
+1. In the upload area, select **browse** and upload:
 
     ```text
     D:\LabFiles\evaluation\Supplier-Assurance-Baseline.csv
     ```
 
-    ![Find the eval file](./assets/05.12-browse.png)
+    > [!IMPORTANT]
+    > If you uploaded while **Single responses** was selected, select **Conversations** and upload the CSV again. Changing the data type alone does not reprocess the earlier upload or clear its validation error. Do not continue until the new upload succeeds.
 
-1. Name the evaluation `Supplier Assurance baseline`.
+1. In **Review data set**, confirm the successful upload contains exactly two conversations: **Review Astor Ridge invoice ARB-260814** and the question about whether a disputed amount of exactly **$10,000** requires human review based on the amount alone.
 
-    ![Name the evaluation](./assets/05.13-eval-name.png)
+    > **Screenshot needed:** Capture the successfully imported two-conversation data set with the evaluation name visible and no upload validation error. Suggested asset: `instructions/assets/05.13-eval-name.png`.
 
-1. Confirm the import contains two conversations: the multi-turn Astor Ridge review and the **$10,000** human-review policy threshold. Select the **Evaluate** button to start the evaluation (this will also save your evaluation)
+1. In **Select test methods**, review **General quality**. In **Additional configuration**, review **Connections** and connect the tools required by your selected connector or MCP path with the assigned account. The number of tools can vary; do not assume a fixed connection count.
 
-    ![Save the evaluation](./assets/05.14-save-eval.png)
+    > **Screenshot needed:** Capture General quality under Select test methods and the required Connections under Additional configuration after connection setup. Suggested asset: `instructions/assets/05.14-eval-configuration.png`.
+
+1. Select **Save** to save the named evaluation configuration.
+
+    > **Screenshot needed:** Capture the named, saved evaluation with the separate Save and Run controls visible and Run available. Suggested asset: `instructions/assets/05.14-save-eval.png`.
+
+1. Select **Run** to start the evaluation.
 
     > [!NOTE]
     > The evaluation can take 5 - 10 minutes to run.
 
-1. Review the evaluation results and check to make sure that everything shows as **passed**.
+1. Wait for the run to complete, then review the results for both conversations. Check for **passed** results; inspect any failures rather than treating an incomplete run or a failed check as success.
 
-    ![Review the evaluation](./assets/05.17-review-eval.png)
+    > **Screenshot needed:** Capture the completed evaluation results for both imported conversations, including their actual outcomes. Suggested asset: `instructions/assets/05.17-review-eval.png`.
 
 1. Select the **Review Astor Ridge invoice ARB-260814** conversation.
 
-    ![Select the conversation](./assets/05.18-select-convo.png)
-
 1. Review the conversation flow, paying attention to the knowledge used and tools called so that you understand what the evaluation did. Select the **X** to close out of the conversation.
 
-    ![Review the conversation](./assets/05.19-review-convo.png)
+    > **Screenshot needed:** Capture the completed Astor Ridge conversation detail showing the knowledge and tool activity used for the evaluation. Suggested asset: `instructions/assets/05.19-review-convo.png`.
 
 > [!NOTE]
 > **Why:** A multi-turn conversation tests whether the agent maintains case context while preserving its grounding and action guardrails. General quality evaluates the conversation without requiring identical wording.

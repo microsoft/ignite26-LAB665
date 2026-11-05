@@ -29,14 +29,14 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
     ```text
     1. Read the attached invoice and capture its supplier, invoice ID, PO, contract, batch or lot, total, and every line.
     2. Use the configured SharePoint tools (connector actions or MCP) to retrieve the matching invoice, lines, supplier, and quality-event records.
-    3. Use SharePoint knowledge to find the governing contract, policy, and written approvals.
-    4. Compare the submitted file with current records. Never resolve a conflict by guessing.
-    5. For each line, identify the invoiced amount, contract-permitted amount, and supporting source.
-    6. Return valid JSON with supplierName, supplierId, invoiceId, purchaseOrder, contractId, invoiceTotal, lineItems, missingEvidence, conflictingEvidence, activeQualityHold, policyUnclear, evidenceSummary, and evidenceCitations.
+    3. Retrieve governing contract, policy, and written approval content from SharePoint knowledge before making claims about permitted charges or approval requirements. A matching filename, an invoice claim, or correct expected numbers alone do not establish grounding.
+    4. Compare the submitted file with current records and retrieved governing evidence. Never resolve missing or conflicting evidence by guessing. If retrieval fails or a source cannot be verified, explicitly record the limitation in missingEvidence or conflictingEvidence and evidenceSummary; set policyUnclear when the governing policy is unavailable or ambiguous. Do not present an unsupported contract-permitted amount as verified.
+    5. For each line, identify the invoiced amount and, only when supported by retrieved content, the contract-permitted amount and supporting source. Preserve available document identities, locations, and citation references in evidenceCitations. If standard citations are unavailable, state that limitation and retain whatever source identity and location were actually returned. Never invent facts, source locations, or citations.
+    6. Return valid JSON with supplierName, supplierId, invoiceId, purchaseOrder, contractId, invoiceTotal, lineItems, missingEvidence, conflictingEvidence, activeQualityHold, policyUnclear, evidenceSummary, and evidenceCitations. Keep missing or conflicting evidence visible for the decision skill and review brief.
     7. Do not calculate totals, recommend an outcome, or write to SharePoint.
     ```
 
-    ![Enter the skill instructions](./assets/04.5-create-skill.png)
+    > **Screenshot needed:** Capture the Invoice Fact Check Instructions with the updated retrieval, missing/conflicting evidence, and evidenceCitations guidance before selecting Create. Suggested asset: `instructions/assets/04.5-create-skill.png`.
 
 ## Upload Invoice Review Decision
 
@@ -101,7 +101,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 
     ![Inspect the activity](./assets/04.13-skill-called.png)
 
-1. Confirm **$204,600** supported, **$13,100** disputed, **$0** reconciliation difference, no active quality hold, and human review required.
+1. Check for **$204,600** supported, **$13,100** disputed, **$0** reconciliation difference, no active quality hold, and human review required. Verify that contract and policy claims are backed by retrieved governing content and that the response and brief preserve available source identities, locations, and citations. If retrieval or citations are unavailable, the response must say so and keep missing or conflicting evidence visible; matching the expected amounts alone is not a successful grounding check.
 
     ![Review the response](./assets/04.14-review-response.png)
 
@@ -118,17 +118,20 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 1. In the text input window, copy and paste this follow up message then press **Enter**:
 
     ```text
-    Record this recommendation in the Invoice Review Log.
+    Record this recommendation in the Invoice Review Log with Review Source set to Interactive Agent. Verify that this is a supported choice in the actual list schema and use the configured tool's declared input shape. Ask for my confirmation before creating the item.
+
+    After writing, read the saved item back and report its item ID, Invoice ID, Review Source, Supported Amount, Disputed Amount, and Human Review Required. If the schema or choice value is unavailable, or any required value reads back blank or mismatched, report an incomplete write, not success. Do not take financial action or claim that a person approved the recommendation.
     ```
 
-    ![Enter the prompt](./assets/04.17-follow-up-prompt.png)
+    > **Screenshot needed:** Capture the updated recording prompt with Review Source = Interactive Agent, confirmation, and read-back requirements visible. Suggested asset: `instructions/assets/04.17-follow-up-prompt.png`.
 
 1. If it struggles to find the Invoice Review Log list, it might ask you for the URL. If it does, provide it with the URL.
+1. Review the proposed entry and confirm creation only when the agent has verified the required schema and supported source value. Do not guess internal field names or value shapes to work around missing metadata; report the missing information if the configured tools cannot expose it.
 1. Review the response. Open the SharePoint **Invoice Review Log**:
 
     +++https://@lab.CloudCredential(AITour27M365E7).TenantPrefix.sharepoint.com/sites/CaldovaSupplierOps/Lists/Invoice%20Review%20Log/AllItems.aspx+++
 
-    Verify one ARB-260814 item with the expected amounts and **Interactive Agent** source.
+    Verify one ARB-260814 item with Supported Amount **204600**, Disputed Amount **13100**, Human Review Required **Yes**, and Review Source **Interactive Agent**. Compare these with the saved-item read-back, not just the agent's creation message. A blank, missing, mismatched, or unreadable source or amount is an incomplete write, even if the create call returned success. The entry records a recommendation, not payment or human approval; a recorded PDF filename is not an attachment.
 
     ![Review the log](./assets/04.18-review-log.png)
 

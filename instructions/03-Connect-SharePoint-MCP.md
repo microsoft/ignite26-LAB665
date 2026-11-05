@@ -2,7 +2,7 @@
 
 # 3 - Connect the SharePoint MCP
 
-This is the MCP path for section 3. If the SharePoint MCP is unavailable or unreliable, use [Add the SharePoint connector](./03-Connect-SharePoint.md) instead. Complete only one path before continuing to section 4.
+This is the MCP path for section 3. If the SharePoint MCP is unavailable or unreliable, use the lab navigation to select **3 - Add the SharePoint connector** instead. Complete only one path, then use the lab navigation to continue to **4 - Add Skills and Review an Invoice**.
 
 ## What is MCP?
 
@@ -91,4 +91,4 @@ Model Context Protocol exposes a menu of operations an agent can discover and ca
 
     ![GO back to the build tab](./assets/03.14-build-tab.png)
 
-Continue to [Add skills and review an invoice](./04-Add-Skills-And-Review-Invoice.md).
+This completes the MCP path for section 3. Use the lab navigation to continue to **4 - Add Skills and Review an Invoice**; do not complete the alternative connector path.

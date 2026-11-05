@@ -43,19 +43,22 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Test prompt](./assets/02.7-test-prompt.png)
 
-1. Confirm the answer identifies **4%**, **$7,400**, and the need for a **revised purchase order** and written **VP approval**.
+1. Check that the answer identifies **4%**, **$7,400**, and the need for a **revised purchase order** and written **VP approval**, supported by retrieved governing contract content. These expected numbers alone do not prove the answer is grounded.
 
     ![Review the response](./assets/02.8-prompt-response.png)
 
     > [!TIP]
-    > Wording can vary. Validate the facts and source rather than expecting an exact sentence.
+    > Wording can vary. Validate the facts and retrieved source rather than expecting an exact sentence. The screenshots illustrate a grounded answer; they do not prove retrieval succeeded in your session.
 
-1. Click on each of the **Citations** shown below the response and verify where the answer came from.
+1. Open each available **Citation** below the response. Verify that the retrieved contract content supports the premium cap and approval requirement, and check its document identity and location.
 
     ![Review citations](./assets/02.9-citations.png)
+
+    > [!IMPORTANT]
+    > If knowledge retrieval fails, the answer must explicitly report the failure rather than guess the contract terms. If document content was retrieved but standard citations are unavailable, check any available document identity and location and have the agent state the citation limitation. Missing or conflicting governing evidence must remain visible; do not mark this grounding check as passed based on the expected numbers alone. The reported `SubstrateSearch(GetNumActiveUsers)` backend failure is not fixed by these instructions.
 
 1. Select the **Build** tab to go back to the configuration screen.
 
     ![Select the build tab](./assets/02.10-build-tab.png)
 
-Continue to [Add the SharePoint connector](./03-Connect-SharePoint.md), or use [Connect the SharePoint MCP](./03-Connect-SharePoint-MCP.md) if you are following the MCP path. Complete only one path before continuing to section 4.
+Use the lab navigation to choose one section 3 path: **3 - Add the SharePoint connector**, or **3 - Connect the SharePoint MCP**. Complete only one path, then use the lab navigation to continue to **4 - Add Skills and Review an Invoice**.

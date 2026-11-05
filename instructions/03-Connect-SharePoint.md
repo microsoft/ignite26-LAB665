@@ -4,7 +4,7 @@
 
 Now you'll enable your agent to perform actions by adding SharePoint connector tools. Use this path as an alternative when the SharePoint MCP is unavailable or unreliable.
 
-Complete either this section or [Connect the SharePoint MCP](./03-Connect-SharePoint-MCP.md), not both. Both paths continue to [Add skills and review an invoice](./04-Add-Skills-And-Review-Invoice.md).
+Use the lab navigation to choose either this section or **3 - Connect the SharePoint MCP**, not both. After completing your chosen path, use the lab navigation to continue to **4 - Add Skills and Review an Invoice**.
 
 ## Add the SharePoint actions
 
@@ -16,7 +16,9 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
     ![Select the Connectors tab](./assets/03.2-connector-tab.png)
 
-1. Type `SharePoint Get` in the text box, and select the **Get item** action from the SharePoint connector.
+1. Type `SharePoint Get` in the text box. The **SharePoint** group may show only a partial list of actions. If **Get item** is not visible, select **See N more** next to **SharePoint** to expand the group, then select **Get item**. The number in **See N more** varies.
+
+    ![SharePoint Get search in Connectors with the collapsed SharePoint group's See 47 more link highlighted](./assets/03.3-expand-sharepoint-actions.png)
 
     ![Select SharePoint Get item](./assets/03.3-select-get-item.png)
 
@@ -28,7 +30,7 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
     ![Select the add button](./assets/03.5-plus-tool.png)
 
-1. Select the **Connectors** tab, search for `SharePoint Get`, and select **Get items**.
+1. Select the **Connectors** tab and search for `SharePoint Get`. If **Get items** is not visible in the partial **SharePoint** group, select **See N more** (the count varies) to expand it, then select **Get items**.
 
     ![Select SharePoint Get items](./assets/03.3-select-get-items.png)
 
@@ -41,7 +43,7 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
 1. Select the **Plus button** in the **Tools** section again, then select the **Connectors** tab.
 
-1. Type `SharePoint Create` in the text box, and select the **Create item** action from the SharePoint connector.
+1. Type `SharePoint Create` in the text box. If **Create item** is not visible in the partial **SharePoint** group, select **See N more** (the count varies) to expand it, then select **Create item**.
 
     ![Select SharePoint Create item](./assets/03.6-select-create-item.png)
 
@@ -57,7 +59,7 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
     ![Select the Connectors tab](./assets/03.2-connector-tab.png)
 
-1. Type `SharePoint Update` in the text box, and select the **Update item** action from the SharePoint connector.
+1. Type `SharePoint Update` in the text box. If **Update item** is not visible in the partial **SharePoint** group, select **See N more** (the count varies) to expand it, then select **Update item**.
 
     ![Select SharePoint Update item](./assets/03.9-select-update-item.png)
 
@@ -77,7 +79,7 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
     ![Select the Connectors tab](./assets/03.2-connector-tab.png)
 
-1. Type `SharePoint Get` in the text box, and select the **Get lists** action from the SharePoint connector.
+1. Type `SharePoint Get` in the text box. If **Get lists** is not visible in the partial **SharePoint** group, select **See N more** (the count varies) to expand it, then select **Get lists**.
 
     ![Select SharePoint Get lists](./assets/03.12-select-get-lists.png)
 
@@ -140,4 +142,4 @@ Complete either this section or [Connect the SharePoint MCP](./03-Connect-ShareP
 
     ![Go back to the build tab](./assets/03.14-build-tab.png)
 
-Continue to [Add skills and review an invoice](./04-Add-Skills-And-Review-Invoice.md).
+This completes the connector path for section 3. Use the lab navigation to continue to **4 - Add Skills and Review an Invoice**; skip the alternative **3 - Connect the SharePoint MCP** page.
