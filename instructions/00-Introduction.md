@@ -2,7 +2,7 @@
 
 # @lab.Title
 
-In this lab, you'll build a Supplier Assurance Agent for Caldova Pharmaceuticals with Copilot Studio and the GitHub Copilot harness.
+In this lab, you'll build a Supplier Assurance Agent for Caldova Pharmaceuticals with Copilot Studio and the Microsoft Copilot harness.
 
 ## Workshop scenario
 
