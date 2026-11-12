@@ -6,10 +6,10 @@
 
 # [Microsoft Ignite 2026](https://ignite.microsoft.com)
 
-## 🔥LAB665: See how far one agent goes in Copilot Studio
+## 🔥LAB665: Build an agent with the Microsoft Copilot harness in Copilot Studio
 ### Session description
 
-How far can one agent go? In this hands-on lab, you'll build an agent in the new Copilot Studio and push it through increasingly complex challenges. Learn how orchestration, Skills, and automation work together to unlock powerful agent experiences.
+In this hands-on lab, learn how to build an agent using the Microsoft Copilot harness in Copilot Studio. Connect your agent to dad, add skills, and incorporate automation to support end-to-end business processes.
 
 ### 🚀 Getting started
 
