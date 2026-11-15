@@ -123,9 +123,6 @@ Use the lab navigation to choose either this section or **3 - Connect the ShareP
 
     ![Approve the tool request](./assets/03.11-approve-mcp.png)
 
-    > [!NOTE]
-    > The remaining screenshots show the shared review flow captured with MCP. On this path, the tool names and permission details will instead reflect the SharePoint connector actions.
-
 1. Confirm the response reports an active supplier, no active quality hold, invoice status Review Requested, and the request item ID.
 
     ![Review the response](./assets/03.12-review-response.png)
@@ -142,4 +139,4 @@ Use the lab navigation to choose either this section or **3 - Connect the ShareP
 
     ![Go back to the build tab](./assets/03.14-build-tab.png)
 
-This completes the connector path for section 3. Use the lab navigation to continue to **4 - Add Skills and Review an Invoice**; skip the alternative **3 - Connect the SharePoint MCP** page.
+Select **Next** to add skills.

@@ -89,6 +89,6 @@ Model Context Protocol exposes a menu of operations an agent can discover and ca
 
 1. Select the **Build** tab to go back to the configuration screen.
 
-    ![GO back to the build tab](./assets/03.14-build-tab.png)
+    ![Go back to the build tab](./assets/03.14-build-tab.png)
 
 This completes the MCP path for section 3. Use the lab navigation to continue to **4 - Add Skills and Review an Invoice**; do not complete the alternative connector path.

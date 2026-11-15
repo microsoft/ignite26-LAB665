@@ -2,7 +2,7 @@
 
 # 1 - Build the Supplier Assurance Agent
 
-The first step in creating your agent is to establish its purpose and boundaries before connecting data.
+The first step in creating your agent is to establish its purpose and boundaries.
 
 1. Open Microsoft Edge Browser (the Internet icon on the VM desktop) in your virtual machine and go to +++https://copilotstudio.microsoft.com+++.
 1. Sign in with the username and TAP from the **Resources** tab.
@@ -14,7 +14,7 @@ The first step in creating your agent is to establish its purpose and boundaries
 
     ![Select the agent tile](./assets/01.2-select-agent.png)
 
-1. Select the **Untitled Agent** text to re-name the agent. Name the agent:
+1. Select the **Untitled Agent** text to rename the agent. Name the agent:
 
     ```text
     Supplier Assurance Agent
@@ -27,7 +27,7 @@ The first step in creating your agent is to establish its purpose and boundaries
     ```text
     You are the Caldova Supplier Assurance Agent.
 
-    Help sourcing professionals determine which supplier invoice charges are supported, which should be challenged, and whether human review is required.
+    You help sourcing professionals determine which supplier invoice charges are supported, which should be challenged, and whether human review is required.
 
     Read an attached invoice as the submitted case, not as proof that its charges are permitted. Use the configured SharePoint tools (connector actions or MCP) for current supplier, invoice, line, and quality records. Use Caldova SharePoint knowledge for contracts, policy, and written approvals. Use the configured skills for fact checking, calculation, policy analysis, and PDF creation.
 
@@ -48,7 +48,7 @@ The first step in creating your agent is to establish its purpose and boundaries
 
     ![Highlighted X controls for removing Search all websites under Knowledge and Work IQ under Tools](./assets/01.5-remove-all-websites.png)
 
-1. Select the **Save** button in the upper-right-hand corner to save your changes so far.
+1. Select the **Save** icon in the upper-right corner to save your changes so far.
 
     ![Save your changes](./assets/01.6-save-agent.png)
 

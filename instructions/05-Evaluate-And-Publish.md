@@ -4,11 +4,11 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 
 ## Enable preference-only memory
 
-1. In the **Build** tab of your agent, location the **Memory** section and toggle the setting to **On**.
+1. In the **Build** tab of your agent, locate the **Memory** section and toggle the setting to **On**.
 
     ![Turn memory on](./assets/05.1-memory-on.png)
 
-1. Select the **Save** icon in the upper right hand corner.
+1. Select the **Save** icon in the upper-right corner.
 
     ![Save the changes](./assets/05.2-save.png)
 
@@ -24,7 +24,7 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 
     ![Save a memory](./assets/05.4-memory-prompt.png)
 
-1. Verify you get a confirmation that the memory was saved.Select the **Manage Memories** button.
+1. Verify you get a confirmation that the memory was saved. Select the **Manage Memories** button.
 
     ![Manage memories](./assets/05.5-manage-memories.png)
 
@@ -44,6 +44,9 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 
     ![Review the response](./assets/05.8-review-memory-test.png)
 
+    > [!NOTE]
+    > Only the communication preferences should come from memory. Confirm that the agent retrieves the review result and invoice date from current SharePoint records rather than remembering case facts from the previous chat.
+
 1. Select the **Build** tab to go back to the configuration screen.
 
     ![Go back to the build tab](./assets/05.9-build-tab.png)
@@ -51,17 +54,69 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 > [!IMPORTANT]
 > **Why:** Location, date format, and personal working style are durable user preferences. Supplier facts, approval limits, case decisions, and quality status can change and must never come from memory.
 
+## Configure Settings
+
+Now let's take a look at some settings to personalize the agent even further.
+
+1. Select the **three dots (...)** in the upper-right corner, then select **Settings**.
+
+    ![Open settings](./assets/02.1-settings.png)
+
+1. Select the **Greetings & prompts** tab.
+
+    ![Select greetings & prompts](./assets/02.2-greetings.png)
+
+1. Copy and paste the following in the **Greeting message** box:
+
+    ```text
+    Hello! I can help review supplier invoices against available contracts, approvals, and quality information, explain supported and disputed charges, and create a review brief. Attach an invoice or provide an invoice ID to begin. Financial decisions remain with an authorized reviewer.
+    ```
+
+    ![Greeting message](./assets/02.3-greeting-message.png)
+
+1. Select **Add a suggested prompt**.
+
+    ![Add suggested prompt](./assets/02.4-add-prompt.png)
+
+1. In the **Title** input, paste in `Review invoice`. In the **Message** input, paste in `Review an attached supplier invoice and create a review brief.`
+
+    ![Review invoice prompt](./assets/02.5-invoice-prompt.png)
+
+1. Select **Add a suggested prompt** again.
+
+    ![Add second prompt](./assets/02.6-add-second-prompt.png)
+
+1. In the **Title** input, paste in `Explain a disputed charge`. In the **Message** input, paste in `Explain why a charge on the attached invoice should be challenged. Show the invoiced amount, the amount supported by evidence, and what would resolve the dispute.`
+
+    ![Explain dispute prompt](./assets/02.6-second-prompt.png)
+
+1. Select **Done** to close out of the agent settings.
+
+    ![Select done](./assets/02.7-settings-done.png)
+
+1. Select the **Save icon** to save your agent settings.
+
+    ![Save](./assets/02.7-save.png)
+
+1. Select the **Preview** tab and notice how your custom greeting and starter prompts now show up.
+
+    ![Review](./assets/02.8-preview-greeting.png)
+
 ## Evaluate the configured agent
 
 1. Select the **Evaluate** tab.
 
-1. If the evaluation setup is not already open, select **Create your first evaluation**. At the top of the setup page, select **Enter the evaluation name** and name it `Supplier Assurance baseline`.
+1. If the evaluation setup is not already open, select **Create your first evaluation**.
 
-    > **Screenshot needed:** Capture the current evaluation setup with the top evaluation name field filled with Supplier Assurance baseline. Suggested asset: `instructions/assets/05.11-create-eval.png`.
+    ![Create eval](./assets/05.11-create-eval.png)
 
-1. In **Create or select a data set**, select **Import**. Under **Select data type**, change the default **Single responses** selection to **Conversations** before uploading the CSV.
+1. At the top of the setup page, select **Enter the evaluation name** and name it `Supplier Assurance baseline`.
 
-    > **Screenshot needed:** Capture Import selected, Conversations selected instead of Single responses, and the CSV upload area before a file is uploaded. Suggested asset: `instructions/assets/05.12-import-conversations.png`.
+    ![Set eval name](./assets/05.12-eval-name.png)
+
+1. In **Create or select a data set**, select **Import**. Under **Select data type**, change the default to **Conversations** before uploading the CSV.
+
+    ![Eval configuration](./assets/05.13-eval-config.png)
 
 1. In the upload area, select **browse** and upload:
 
@@ -74,37 +129,52 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
 
 1. In **Review data set**, confirm the successful upload contains exactly two conversations: **Review Astor Ridge invoice ARB-260814** and the question about whether a disputed amount of exactly **$10,000** requires human review based on the amount alone.
 
-    > **Screenshot needed:** Capture the successfully imported two-conversation data set with the evaluation name visible and no upload validation error. Suggested asset: `instructions/assets/05.13-eval-name.png`.
+    ![Eval data set](./assets/05.14-eval-data-set.png)
 
-1. In **Select test methods**, review **General quality**. In **Additional configuration**, review **Connections** and connect the tools required by your selected connector or MCP path with the assigned account. The number of tools can vary; do not assume a fixed connection count.
+1. In **Select test methods**, make sure **General quality** is set.
 
-    > **Screenshot needed:** Capture General quality under Select test methods and the required Connections under Additional configuration after connection setup. Suggested asset: `instructions/assets/05.14-eval-configuration.png`.
+    ![Eval general quality](./assets/05.15-gen-quality.png)
 
-1. Select **Save** to save the named evaluation configuration.
+1. In **Additional configuration**, review **Connections**. Select **Connect Tool** (or **Connect N tools**, depending on the selected path), authenticate the configured SharePoint tools with your assigned account if prompted, then select **Save** in the pop-up. Confirm that all required tools are connected before running the evaluation.
 
-    > **Screenshot needed:** Capture the named, saved evaluation with the separate Save and Run controls visible and Run available. Suggested asset: `instructions/assets/05.14-save-eval.png`.
+    ![Eval connections](./assets/05.15-conections.png)
+
+1. Select the **Save** icon to save the named evaluation configuration.
+
+    ![Save eval](./assets/05.16-save-eval.png)
 
 1. Select **Run** to start the evaluation.
 
+    ![Run eval](./assets/05.17-run-eval.png)
+
     > [!NOTE]
-    > The evaluation can take 5 - 10 minutes to run.
+    > The evaluation can take 5-10 minutes to run.
 
 1. Wait for the run to complete, then review the results for both conversations. Check for **passed** results; inspect any failures rather than treating an incomplete run or a failed check as success.
 
-    > **Screenshot needed:** Capture the completed evaluation results for both imported conversations, including their actual outcomes. Suggested asset: `instructions/assets/05.17-review-eval.png`.
+    ![Eval results](./assets/05.18-eval-pass.png)
 
 1. Select the **Review Astor Ridge invoice ARB-260814** conversation.
 
-1. Review the conversation flow, paying attention to the knowledge used and tools called so that you understand what the evaluation did. Select the **X** to close out of the conversation.
+1. Review the conversation flow, paying attention to the knowledge used and tools called. Confirm:
+   - Supported amount **$204,600**, disputed amount **$13,100**, and reconciliation difference **$0**.
+   - Human review is required because the disputed amount exceeds **$10,000**, with no active quality hold.
+   - Contract and policy claims are grounded in retrieved content, and missing evidence or citation limitations remain visible.
+   - Both **invoice-fact-check** and **supplier-policy-triage** are used.
+   - Any Invoice Review Log creation happens only after explicit confirmation; no financial or supplier action is taken.
 
-    > **Screenshot needed:** Capture the completed Astor Ridge conversation detail showing the knowledge and tool activity used for the evaluation. Suggested asset: `instructions/assets/05.19-review-convo.png`.
+    No invoice file is attached in this evaluation. The agent should explicitly state that it used SharePoint invoice records instead of comparing an attachment. Select the **X** to close the conversation.
+
+    ![Review eval](./assets/05.19-review-eval.png)
+
+1. Open the **$10,000** boundary-question conversation. Confirm that the answer says a disputed amount of **exactly $10,000 does not require human review based on the amount alone**. The amount-based rule applies above $10,000; other policy conditions may still require human review. Verify the policy citation, then close the conversation.
 
 > [!NOTE]
-> **Why:** A multi-turn conversation tests whether the agent maintains case context while preserving its grounding and action guardrails. General quality evaluates the conversation without requiring identical wording.
+> **Why:** A multi-turn conversation tests whether the agent maintains case context while preserving its grounding and action guardrails. General quality evaluates the conversation without requiring identical wording, but a passing score does not replace the amount, evidence, and confirmation checks above. Investigate discrepancies before publishing.
 
 ## Publish
 
-1. Select the **Publish** button in the upper right hand corner and wait for completion.
+1. Select the **Publish** button in the upper-right corner to open the publishing dialog.
 
     ![Publish the agent](./assets/05.20-publish.png)
 

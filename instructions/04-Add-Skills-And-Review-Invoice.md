@@ -1,6 +1,6 @@
 # 4 - Add Skills and Review an Invoice
 
-The harness will coordinate two skills. Invoice Fact Check gathers and structures facts. Invoice Review Decision runs deterministic Python, applies the policy, and creates a PDF.
+The Microsoft Copilot harness will coordinate two skills. Invoice Fact Check (`invoice-fact-check`) gathers and structures facts. Supplier Policy Triage (`supplier-policy-triage`) runs deterministic Python, applies the policy, and creates a PDF.
 
 ## Create Invoice Fact Check
 
@@ -19,7 +19,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 1. Copy and paste the following in the **Description** input:
 
     ```text
-    Use when a user asks to review a supplier invoice. Read the submitted invoice, retrieve current SharePoint records, and gather governing contract terms, approvals, policy, and active quality-hold information before a decision is made.
+    Use when a user asks to review a supplier invoice by attachment or invoice ID. Read the submitted invoice when attached, retrieve current SharePoint records, and gather governing contract terms, approvals, policy, and active quality-hold information before a decision is made.
     ```
 
     ![Enter the skill description](./assets/04.4-skill-description.png)
@@ -27,18 +27,16 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 1. Copy and paste the following in the **Instructions** input then select **Create**:
 
     ```text
-    1. Read the attached invoice and capture its supplier, invoice ID, PO, contract, batch or lot, total, and every line.
-    2. Use the configured SharePoint tools (connector actions or MCP) to retrieve the matching invoice, lines, supplier, and quality-event records.
+    1. If an invoice is attached, read it and capture its supplier, invoice ID, PO, contract, batch or lot, total, and every line. If no file is attached, use the supplied invoice ID to retrieve those facts from SharePoint instead. If neither an attachment nor an invoice ID is available, ask for one before continuing.
+    2. Use the configured SharePoint tools (connector actions or MCP) to retrieve the matching invoice, lines, supplier, and quality-event records. For an invoice-ID-only review, state in evidenceSummary that no submitted file was attached or compared; do not claim to have reviewed an attachment.
     3. Retrieve governing contract, policy, and written approval content from SharePoint knowledge before making claims about permitted charges or approval requirements. A matching filename, an invoice claim, or correct expected numbers alone do not establish grounding.
-    4. Compare the submitted file with current records and retrieved governing evidence. Never resolve missing or conflicting evidence by guessing. If retrieval fails or a source cannot be verified, explicitly record the limitation in missingEvidence or conflictingEvidence and evidenceSummary; set policyUnclear when the governing policy is unavailable or ambiguous. Do not present an unsupported contract-permitted amount as verified.
+    4. Compare the submitted file, when present, with current records and retrieved governing evidence. For an invoice-ID-only review, compare the retrieved invoice and lines with the governing evidence. Never resolve missing or conflicting evidence by guessing. If retrieval fails or a source cannot be verified, explicitly record the limitation in missingEvidence or conflictingEvidence and evidenceSummary; set policyUnclear when the governing policy is unavailable or ambiguous. Do not present an unsupported contract-permitted amount as verified.
     5. For each line, identify the invoiced amount and, only when supported by retrieved content, the contract-permitted amount and supporting source. Preserve available document identities, locations, and citation references in evidenceCitations. If standard citations are unavailable, state that limitation and retain whatever source identity and location were actually returned. Never invent facts, source locations, or citations.
     6. Return valid JSON with supplierName, supplierId, invoiceId, purchaseOrder, contractId, invoiceTotal, lineItems, missingEvidence, conflictingEvidence, activeQualityHold, policyUnclear, evidenceSummary, and evidenceCitations. Keep missing or conflicting evidence visible for the decision skill and review brief.
     7. Do not calculate totals, recommend an outcome, or write to SharePoint.
     ```
 
-    > **Screenshot needed:** Capture the Invoice Fact Check Instructions with the updated retrieval, missing/conflicting evidence, and evidenceCitations guidance before selecting Create. Suggested asset: `instructions/assets/04.5-create-skill.png`.
-
-## Upload Invoice Review Decision
+## Upload Supplier Policy Triage
 
 1. Select the **Add** icon in the **Skills** section.
 
@@ -54,7 +52,10 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
     D:\LabFiles\skills\invoice-review-decision.zip
     ```
 
-1. Confirm that the skill shows up in the **Skills** section.
+    > [!NOTE]
+    > The hosted file is named **invoice-review-decision.zip**, but the skill inside it is named **supplier-policy-triage**. Keep the ZIP filename unchanged. After importing, look for **supplier-policy-triage**, not **invoice-review-decision**.
+
+1. Confirm that **supplier-policy-triage** shows up in the **Skills** section.
 
     ![Select the skill](./assets/04.7-review-skills.png)
 
@@ -62,7 +63,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 
     ![Select the skill](./assets/04.8-select-supplier-skill.png)
 
-1. Review the skill and make sure that it has 2 files, a SKILL,md and a calculate_supplier_review.py file. Select the **X** to close out of the skill.
+1. Review the skill and confirm that it has two files: `SKILL.md` and `calculate_supplier_review.py`. Select the **X** to close the skill.
 
     ![Review the skill](./assets/04.9-skill-review.png)
 
@@ -96,7 +97,7 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
    - **invoice-fact-check** skill called
    - SharePoint list reads through your configured connector actions or MCP
    - SharePoint knowledge citations
-   - **invoice-review-decision** skill called
+   - **supplier-policy-triage** skill called
    - Python execution
 
     ![Inspect the activity](./assets/04.13-skill-called.png)
@@ -109,13 +110,19 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
 
     ![Open the PDF](./assets/04.15-select-pdf.png)
 
-1. Review the PDF and make sure all the data is carried over.
+1. Review the PDF and confirm that it includes:
+   - Invoice ID **ARB-260814** and the correct supplier.
+   - Supported amount **$204,600**, disputed amount **$13,100**, and reconciliation difference **$0**.
+   - Human review required, with the reason that the disputed amount exceeds **$10,000**.
+   - No active quality hold, with supporting evidence.
+   - Available source identities, locations, and citations for contract and policy claims.
+   - Any missing or conflicting evidence and any retrieval or citation limitations reported in the response.
 
     ![Review the PDF](./assets/04.16-review-pdf.png)
 
 ## Record the recommendation
 
-1. In the text input window, copy and paste this follow up message then press **Enter**:
+1. In the text input window, copy and paste this follow-up message, then press **Enter**:
 
     ```text
     Record this recommendation in the Invoice Review Log with Review Source set to Interactive Agent. Verify that this is a supported choice in the actual list schema and use the configured tool's declared input shape. Ask for my confirmation before creating the item.
@@ -123,9 +130,14 @@ The harness will coordinate two skills. Invoice Fact Check gathers and structure
     After writing, read the saved item back and report its item ID, Invoice ID, Review Source, Supported Amount, Disputed Amount, and Human Review Required. If the schema or choice value is unavailable, or any required value reads back blank or mismatched, report an incomplete write, not success. Do not take financial action or claim that a person approved the recommendation.
     ```
 
-    > **Screenshot needed:** Capture the updated recording prompt with Review Source = Interactive Agent, confirmation, and read-back requirements visible. Suggested asset: `instructions/assets/04.17-follow-up-prompt.png`.
+1. If the agent asks for the **Invoice Review Log** URL, provide:
 
-1. If it struggles to find the Invoice Review Log list, it might ask you for the URL. If it does, provide it with the URL.
+    +++https://@lab.CloudCredential(AITour27M365E7).TenantPrefix.sharepoint.com/sites/CaldovaSupplierOps/Lists/Invoice%20Review%20Log/AllItems.aspx+++
+
+    > [!IMPORTANT]
+    > A list URL alone does not establish its column schema. If the tools cannot retrieve the required metadata, open the list in SharePoint and select **Settings > List settings**. Under **Columns**, inspect the required columns and open **Review Source** to verify its type and allowed choices, including **Interactive Agent**. Do not change the list settings. Provide only metadata you can verify, and use only input fields and value shapes exposed by the configured tool. Display names do not prove internal column names.
+    >
+    > If you cannot access the settings, verify a required choice, or supply the schema in the tool's declared input shape, stop the log-write attempt and report it as incomplete. Ask your instructor for help. You may continue to the remaining sections with the review result, but do not treat the logging check as passed or weaken the confirmation requirement.
 1. Review the proposed entry and confirm creation only when the agent has verified the required schema and supported source value. Do not guess internal field names or value shapes to work around missing metadata; report the missing information if the configured tools cannot expose it.
 1. Review the response. Open the SharePoint **Invoice Review Log**:
 
