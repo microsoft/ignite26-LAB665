@@ -2,7 +2,7 @@
 
 # 2 - Add SharePoint Knowledge
 
-Contracts, policy, approvals, and quality documents are are the sources that will govern the supplier reviews. You will connect the prepared SharePoint library as agent knowledge.
+Contracts, policy, approvals, and quality documents are the sources that will govern the supplier reviews. You will connect the prepared SharePoint site as agent knowledge.
 
 1. On the agent overview, find **Knowledge** and select **Add knowledge**.
 
@@ -12,7 +12,7 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Select the SharePoint option](./assets/02.2-select-sharepoint.png)
 
-1. Enter the assigned tenant root site URL then select **Add**:
+1. Enter the prepared **CaldovaSupplierOps** site URL, then select **Add**:
 
     +++https://@lab.CloudCredential(AITour27M365E7).TenantPrefix.sharepoint.com/sites/CaldovaSupplierOps+++
 
@@ -22,7 +22,7 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Select add to agent button](./assets/02.4-add-to-agent.png)
 
-1. Confirm the knowledge source is now showing in the knowledge section. Select the **Save** icon in the upper right hand corner.
+1. Confirm the knowledge source is now showing in the knowledge section. Select the **Save** icon in the upper-right corner.
 
     ![Confirm knowledge](./assets/02.5-confirm-knowledge.png)
 
@@ -31,7 +31,7 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
 ## Test document knowledge grounding
 
-1. Select the **Preview** tab at the top or your agent to open up the testing screen.
+1. Select the **Preview** tab at the top of your agent to open the testing screen.
 
     ![Select the preview tab](./assets/02.6-preview-tab.png)
 
@@ -58,4 +58,4 @@ Contracts, policy, approvals, and quality documents are are the sources that wil
 
     ![Select the build tab](./assets/02.10-build-tab.png)
 
-Use the lab navigation to choose one section 3 path: **3 - Add the SharePoint connector**, or **3 - Connect the SharePoint MCP**. Complete only one path, then use the lab navigation to continue to **4 - Add Skills and Review an Invoice**.
+Select **Next** to add tools.

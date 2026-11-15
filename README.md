@@ -9,7 +9,7 @@
 ## 🔥LAB665: Build an agent with the Microsoft Copilot harness in Copilot Studio
 ### Session description
 
-In this hands-on lab, learn how to build an agent using the Microsoft Copilot harness in Copilot Studio. Connect your agent to dad, add skills, and incorporate automation to support end-to-end business processes.
+In this hands-on lab, learn how to build an agent using the Microsoft Copilot harness in Copilot Studio. Connect your agent to data, add skills, and incorporate automation to support end-to-end business processes.
 
 ### 🚀 Getting started
 
@@ -24,6 +24,9 @@ If you're following along during a live session:
 #### On your own
 
 If you're learning at your own pace:
+
+> [!IMPORTANT]
+> The current lab depends on the prepared hosted environment. This repository does not include the skill ZIP, evaluation CSV, invoice workbook, or SharePoint provisioning resources. Cloning it alone is not enough to run the lab. Before attempting it outside a hosted session, obtain the lab inputs and equivalent prepared resources from your instructor or lab provider.
 
 1. Clone this repository or browse the [lab instructions](instructions/README.md) on GitHub.
 2. Review the [lab overview and environment requirements](instructions/README.md). The hosted lab uses a prepared SharePoint site, reference documents, operational lists, learner account, mailbox, and Power Platform environment. Outside the hosted lab, you'll need equivalent resources and must replace Skillable variables with values from your own environment.
@@ -40,7 +43,7 @@ By the end of this session, you will be able to:
 ### 💻 Technologies used
 
 - Microsoft Copilot Studio
-- Microsoft Copilot Harness
+- Microsoft Copilot harness
 - SharePoint
 
 ### 📚 Continue your learning
