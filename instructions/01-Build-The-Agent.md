@@ -10,7 +10,7 @@ The first step in creating your agent is to establish its purpose and boundaries
 
     ![Select the assigned Power Platform environment](./assets/01.1-select-environment.png)
 
-1. On the home page, select the **Agent (GitHub Copilot)** tile.
+1. On the home page, select the **Agent** tile.
 
     ![Select the agent tile](./assets/01.2-select-agent.png)
 
