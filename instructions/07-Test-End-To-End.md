@@ -69,4 +69,4 @@ Your agent and workflow are ready. Test the end-to-end process with a second inv
 
 No payment, rejection, supplier change, or quality-hold change was made.
 
-Congratulations. Select **Next**, then **Submit** to finish the lab.
+Congratulations! You have just built your first agent with the Microsoft Copilot harness!

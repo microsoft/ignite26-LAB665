@@ -2,8 +2,6 @@
 
 Now you'll create a Workflow that starts an invoice review when a SharePoint request is added. The Workflow only orchestrates the work; your agent retrieves records, applies policy, and produces the response.
 
-This unattended path reviews an invoice by ID without an attached file. It stores the readable response on the request item; it does not explicitly persist a generated PDF or create an Invoice Review Log entry. Do not remove the agent's interactive confirmation requirement to make the workflow run.
-
 ## Create the Workflow
 
 1. Select the **Workflows** tab in Copilot Studio.

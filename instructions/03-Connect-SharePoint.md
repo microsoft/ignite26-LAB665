@@ -2,9 +2,7 @@
 
 # 3 - Add the SharePoint connector
 
-Now you'll enable your agent to perform actions by adding SharePoint connector tools. Use this path as an alternative when the SharePoint MCP is unavailable or unreliable.
-
-Use the lab navigation to choose either this section or **3 - Connect the SharePoint MCP**, not both. After completing your chosen path, use the lab navigation to continue to **4 - Add Skills and Review an Invoice**.
+Now you'll enable your agent to perform actions by adding SharePoint connector tools.
 
 ## Add the SharePoint actions
 
