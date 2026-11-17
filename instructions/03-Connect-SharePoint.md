@@ -65,10 +65,6 @@ Now you'll enable your agent to perform actions by adding SharePoint connector t
 
     ![Add Update item](./assets/03.10-add-update-item.png)
 
-1. Select the **Save** icon to save your changes.
-
-    ![Save the changes](./assets/03.11-save.png)
-
 1. Select the **Plus button** in the **Tools** section again.
 
     ![Select the add button](./assets/03.11-plus-button.png)
