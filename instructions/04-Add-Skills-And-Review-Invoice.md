@@ -1,6 +1,6 @@
 # 4 - Add Skills and Review an Invoice
 
-The Microsoft Copilot harness will coordinate two skills. Invoice Fact Check (`invoice-fact-check`) gathers and structures facts. Supplier Policy Triage (`supplier-policy-triage`) runs deterministic Python, applies the policy, and creates a PDF.
+The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check** gathers and structures facts. **Supplier Policy Triage** runs deterministic Python, applies the policy, and creates a PDF.
 
 ## Create Invoice Fact Check
 
@@ -63,7 +63,7 @@ The Microsoft Copilot harness will coordinate two skills. Invoice Fact Check (`i
 
     ![Select the skill](./assets/04.8-select-supplier-skill.png)
 
-1. Review the skill and confirm that it has two files: `SKILL.md` and `calculate_supplier_review.py`. Select the **X** to close the skill.
+1. Review the skill and confirm that it has two files: **SKILL.md** and **calculate_supplier_review.py**. Select the **X** to close the skill.
 
     ![Review the skill](./assets/04.9-skill-review.png)
 
@@ -134,10 +134,6 @@ The Microsoft Copilot harness will coordinate two skills. Invoice Fact Check (`i
 
     +++https://@lab.CloudCredential(AITour27M365E7).TenantPrefix.sharepoint.com/sites/CaldovaSupplierOps/Lists/Invoice%20Review%20Log/AllItems.aspx+++
 
-    > [!IMPORTANT]
-    > A list URL alone does not establish its column schema. If the tools cannot retrieve the required metadata, open the list in SharePoint and select **Settings > List settings**. Under **Columns**, inspect the required columns and open **Review Source** to verify its type and allowed choices, including **Interactive Agent**. Do not change the list settings. Provide only metadata you can verify, and use only input fields and value shapes exposed by the configured tool. Display names do not prove internal column names.
-    >
-    > If you cannot access the settings, verify a required choice, or supply the schema in the tool's declared input shape, stop the log-write attempt and report it as incomplete. Ask your instructor for help. You may continue to the remaining sections with the review result, but do not treat the logging check as passed or weaken the confirmation requirement.
 1. Review the proposed entry and confirm creation only when the agent has verified the required schema and supported source value. Do not guess internal field names or value shapes to work around missing metadata; report the missing information if the configured tools cannot expose it.
 1. Review the response. Open the SharePoint **Invoice Review Log**:
 
