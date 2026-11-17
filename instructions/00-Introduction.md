@@ -21,16 +21,19 @@ You will then build a simple workflow that reviews a second supplier request.
 
 The agent never pays an invoice, rejects a charge, changes supplier status, or issues a quality hold. It recommends; an authorized person decides.
 
-## Sign in to the virtual machine
+## Schedule
 
-Select the **Resources** tab to find your virtual machine and Microsoft 365 credentials. Select the destination field in the VM before selecting the corresponding green autotype text in the **Resources** tab. For example, select the VM's **Password** field, then select the password's autotype control to enter it and log in.
+Times are elapsed minutes from the start of the session.
 
-> [!NOTE]
-> To ensure text is entered accurately, avoid interacting or clicking in the VM until the text has finished being typed.
+| Time | Minutes | Activity |
+| --- | ---: | --- |
+| 00–15 | 15 | Intro presentation |
+| 15–65 | 50 | Hands on Lab |
+| 65–75 | 10 | Wrap-up |
+| **Total** | **75** | |
 
-## Verify your assigned resources
+## Getting started:
 
-1. Confirm the **Resources** panel shows values for **ADMINISTRATIVE USERNAME** and **TEMPORARY ACCESS PASS (TAP)**. You'll need these to log in to the Microsoft 365 account.
-1. Confirm the lab files exist on your virtual machine's hard drive at `D:\LabFiles`.
+1. If needed, log in to the Virtual Machine using the password +++@lab.VirtualMachine(LAB665).Password+++
 
-Ready to get started? Click **Next**.
+   > **Note:** To ensure text is entered accurately, avoid interacting or clicking in the VM until the text has finished being typed.
