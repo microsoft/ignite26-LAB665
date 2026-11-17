@@ -5,7 +5,12 @@
 The first step in creating your agent is to establish its purpose and boundaries.
 
 1. Open Microsoft Edge Browser (the Internet icon on the VM desktop) in your virtual machine and go to +++https://copilotstudio.microsoft.com+++.
-1. Sign in with the username and TAP from the **Resources** tab.
+1. Sign in using the username and Temporary Access Pass below.
+
+    **Username:** +++@lab.CloudCredential(WWLM365E7).AdministrativeUsername+++<br />
+    **Temporary Access Pass:** +++@lab.Variable(TAP)+++
+
+    If a welcome screen appears, click **X** to close it and continue.
 1. Select the environment dropdown in the bottom left-hand corner and choose the **DevOne** environment.
 
     ![Select the assigned Power Platform environment](./assets/01.1-select-environment.png)
