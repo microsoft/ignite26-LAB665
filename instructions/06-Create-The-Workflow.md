@@ -69,9 +69,9 @@ Now you'll create a Workflow that starts an invoice review when a SharePoint req
 
     ![Paste the message](./assets/06.10-message.png)
 
-1. Delete the **[Invoice ID]** placeholder in the message. With your cursor where the text was, select the **lightning bolt icon**.
+1. Delete the **[Invoice ID]** placeholder in the message. With your cursor where the text was, select the **lightning bolt icon** at the **bottom right** of the message input.
 
-    ![Paste the message](./assets/06.11-InvoiceID-lighting-bolt.png)
+    ![Paste the message](./assets/06.2-lightning-bolt.png)
 
 1. Select the **Invoice ID** property from the **When an item is created** trigger.
 
