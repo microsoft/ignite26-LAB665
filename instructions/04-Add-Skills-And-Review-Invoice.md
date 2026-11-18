@@ -24,7 +24,7 @@ The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check**
 
     ![Enter the skill description](./assets/04.4-skill-description.png)
 
-1. Copy and paste the following in the **Instructions** input then select **Create**:
+1. Delete the placeholder text in the **Instructions** input then copy and paste the following instructions in and select **Create**:
 
     ```text
     1. If an invoice is attached, read it and capture its supplier, invoice ID, PO, contract, batch or lot, total, and every line. If no file is attached, use the supplied invoice ID to retrieve those facts from SharePoint instead. If neither an attachment nor an invoice ID is available, ask for one before continuing.
@@ -46,10 +46,10 @@ The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check**
 
     ![Select the upload button](./assets/04.6-upload-skill.png)
 
-1. Browse to:
+1. Browse to following path in your windows file explorer and choose the **invoice-review-decision.zip** file then click **Open**:
 
     ```text
-    D:\LabFiles\skills\invoice-review-decision.zip
+    D:\LabFiles\skills\
     ```
 
     > [!NOTE]
@@ -125,7 +125,7 @@ The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check**
 1. In the text input window, copy and paste this follow-up message, then press **Enter**:
 
     ```text
-    Record this recommendation in the Invoice Review Log with Review Source set to Interactive Agent. Verify that this is a supported choice in the actual list schema and use the configured tool's declared input shape. Ask for my confirmation before creating the item.
+    Record this recommendation in the Invoice Review Log with Review Source set to Interactive Agent. 
 
     After writing, read the saved item back and report its item ID, Invoice ID, Review Source, Supported Amount, Disputed Amount, and Human Review Required. If the schema or choice value is unavailable, or any required value reads back blank or mismatched, report an incomplete write, not success. Do not take financial action or claim that a person approved the recommendation.
     ```
