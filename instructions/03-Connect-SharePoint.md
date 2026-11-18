@@ -81,7 +81,7 @@ Now you'll enable your agent to perform actions by adding SharePoint connector t
 
     ![Add Get lists](./assets/03.13-add-get-lists.png)
 
-1. Select the **Save** icon to save your changes.
+1. Select the **Save** icon and then **Publish** to save your changes.
 
     ![Save the changes](./assets/03.14-save.png)
 
