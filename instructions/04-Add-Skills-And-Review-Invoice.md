@@ -127,7 +127,7 @@ The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check**
     ```text
     Record this recommendation in the Invoice Review Log with Review Source set to Interactive Agent. 
 
-    After writing, read the saved item back and report its item ID, Invoice ID, Review Source, Supported Amount, Disputed Amount, and Human Review Required. If the schema or choice value is unavailable, or any required value reads back blank or mismatched, report an incomplete write, not success. Do not take financial action or claim that a person approved the recommendation.
+    After writing, read the saved item back and report its item ID, Invoice ID, Review Source, Supported Amount, Disputed Amount, and Human Review Required. Do not take financial action or claim that a person approved the recommendation.
     ```
 
 1. If the agent asks for the **Invoice Review Log** URL, provide:
