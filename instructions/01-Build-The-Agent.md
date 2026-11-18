@@ -8,7 +8,7 @@ The first step in creating your agent is to establish its purpose and boundaries
 1. Sign in using the username and Temporary Access Pass below.
 
     **Username:** +++@lab.CloudCredential(WWLM365E7).AdministrativeUsername+++<br />
-    **Temporary Access Pass:** +++@lab.Variable(TAP)+++
+    **Temporary Access Pass:** +++@lab.CloudCredential(WWLM365E7).AdministrativeTAP+++
 
     If a welcome screen appears, click **X** to close it and continue.
 1. Select the environment dropdown in the bottom left-hand corner and choose the **DevOne** environment.
