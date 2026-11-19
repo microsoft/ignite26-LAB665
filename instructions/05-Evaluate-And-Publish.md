@@ -135,9 +135,21 @@ Now let's take a look at some settings to personalize the agent even further.
 
     ![Eval general quality](./assets/05.15-gen-quality.png)
 
-1. In **Additional configuration**, review **Connections**. Select **Connect Tool** (or **Connect N tools**, depending on the selected path), authenticate the configured SharePoint tools with your assigned account if prompted, then select **Save** in the pop-up. Confirm that all required tools are connected before running the evaluation.
+1. In **Additional configuration**, select **Manage**.
 
-    ![Eval connections](./assets/05.15-conections.png)
+    ![Select Manage](./assets/05-manage-config.png)
+
+1. Select **Add Account**
+
+    ![Add Account](./assets/05-add-account.png)
+
+1. Select your account from the list
+
+    ![Select Account](./assets/05-select-account.png)
+
+1. Select **Save** to save your configuration.
+
+    ![Save](./assets/05-save-connection.png)
 
 1. Select the **Save** icon to save the named evaluation configuration.
 
