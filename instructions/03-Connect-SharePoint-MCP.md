@@ -87,7 +87,7 @@ Model Context Protocol exposes a menu of operations an agent can discover and ca
 
     ![Review the list](./assets/03.13-view-list-item.png)
 
-1. Select the **Build** tab to go back to the configuration screen.
+1. Go back to the tab where you were configuring your agent in Copilot Studio. Select the **Build** tab to go back to the configuration screen.
 
     ![Go back to the build tab](./assets/03.14-build-tab.png)
 

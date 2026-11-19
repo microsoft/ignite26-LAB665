@@ -54,7 +54,7 @@ Contracts, policy, approvals, and quality documents are the sources that will go
 
     ![Review citations](./assets/02.9-citations.png)
 
-1. Select the **Build** tab to go back to the configuration screen.
+1. Go back to the tab where you were configuring your agent in Copilot Studio. Select the **Build** tab to go back to the configuration screen.
 
     ![Select the build tab](./assets/02.10-build-tab.png)
 
