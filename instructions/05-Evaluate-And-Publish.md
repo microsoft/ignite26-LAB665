@@ -47,7 +47,7 @@ Now we'll see how to add a layer of personalization to the agent with memories. 
     > [!NOTE]
     > Only the communication preferences should come from memory. Confirm that the agent retrieves the review result and invoice date from current SharePoint records rather than remembering case facts from the previous chat.
 
-1. Select the **Build** tab to go back to the configuration screen.
+1. Go back to the tab where you were configuring your agent in Copilot Studio. Select the **Build** tab to go back to the configuration screen.
 
     ![Go back to the build tab](./assets/05.9-build-tab.png)
 

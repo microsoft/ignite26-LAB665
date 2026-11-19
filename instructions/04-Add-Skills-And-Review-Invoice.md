@@ -143,7 +143,7 @@ The Microsoft Copilot harness will coordinate two skills. **Invoice Fact Check**
 
     ![Review the log](./assets/04.18-review-log.png)
 
-1. Select **Build** to go back to the configuration screen.
+1. Go back to the tab where you were configuring your agent in Copilot Studio. Select the **Build** tab to go back to the configuration screen.
 
     ![Select the build tab](./assets/04.19-build-tab.png)
 
