@@ -113,10 +113,6 @@ Now you'll enable your agent to perform actions by adding SharePoint connector t
 
     ![Enter the request](./assets/03.10-test-prompt.png)
 
-1. If prompted, select **Approve** in the **Permission Required** message to call the SharePoint tools.
-
-    ![Approve the tool request](./assets/03.11-approve-mcp.png)
-
 1. Confirm the response reports an active supplier, no active quality hold, invoice status Review Requested, and the request item ID.
 
     ![Review the response](./assets/03.12-review-response.png)
